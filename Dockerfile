@@ -2,6 +2,8 @@ ARG VERSION=latest
 FROM ghcr.io/tailscale/tailscale:${VERSION} as tailscale
 
 FROM alpine:latest
+RUN apk add --no-cache ca-certificates iptables iproute2 ip6tables
+
 WORKDIR /app
 
 COPY --from=tailscale /usr/local/bin/tailscale .
