@@ -1,5 +1,3 @@
-MAINTAINER Amir Omidi amir@aaomidi.com
-
 ARG VERSION=latest
 FROM ghcr.io/tailscale/tailscale:${VERSION} as tailscale
 
@@ -14,3 +12,4 @@ COPY --from=tailscale /usr/local/bin/tailscaled .
 COPY ./run.sh .
 CMD /app/run.sh
 
+MAINTAINER Amir Omidi amir@aaomidi.com
