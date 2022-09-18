@@ -31,5 +31,5 @@ jobs:
         with:
           push: true
           tags: aaomidi/tailscale-sidecar:$${{ matrix.version }}
-          build-args:
-            - VERSION=${{ matrix.version }}
+          build-args: |
+            VERSION=${{ matrix.version }}
