@@ -1,5 +1,5 @@
 ARG VERSION=latest
-FROM ghcr.io/tailscale/tailscale:{VERSION} as tailscale
+FROM ghcr.io/tailscale/tailscale:${VERSION} as tailscale
 
 FROM alpine:latest
 WORKDIR /app
